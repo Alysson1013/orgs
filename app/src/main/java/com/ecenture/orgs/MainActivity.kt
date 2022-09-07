@@ -3,6 +3,7 @@ package com.ecenture.orgs
 import android.app.Activity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity: Activity() {
@@ -10,9 +11,16 @@ class MainActivity: Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val view = View(this)
+        setContentView(R.layout.activity_main)
 
-        setContentView(view)
+        val nome: TextView = findViewById<TextView>(R.id.nome)
+        nome.text = "Cesta de frutas"
+
+        val descricao = findViewById<TextView>(R.id.descricao)
+        descricao.text = "Laranja, manga e maçã"
+
+        val valor = findViewById<TextView>(R.id.valor)
+        valor.text = "19.99"
     }
 
 }
